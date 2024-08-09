@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Register</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="container m-auto mt-4">
+    <div class="">
+      <a class="border p-2 bg-green-500 rounded mr-4 text-white" href="/"
+        >Back</a
+      >
+
+      <h2 class="text-center text-2xl">Login Using Crediantial</h2>
+      <form action="/users/login" method="post">
+        <% if(error){ %>
+        <p class="text-red-400 text-xl"><%= error %></p>
+        <% } %>
+        <input
+          class="border p-2 rounded border-rose-500 block mb-4"
+          type="Email"
+          name="email"
+          placeholder="Enter Your Email"
+        />
+
+        <input
+          class="border p-2 rounded border-rose-500 block mb-6"
+          type="password"
+          name="password"
+          placeholder="Enter Your password"
+        />
+        <input
+          class="border p-2 rounded border-rose-500 mb-6"
+          type="submit"
+          value="Login"
+        />
+      </form>
+    </div>
+  </body>
+</html>
